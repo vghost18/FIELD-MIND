@@ -34,8 +34,8 @@ An innovative Machine Learning (ML) and Deep Learning (DL) powered web platform 
 - It is highly recommended to clone the deploy branch for running the project locally (the further steps apply only if you have the deploy branch cloned)
 - Once the project is cloned or downloaded , open anaconda prompt in the directory where the project was cloned and paste the following block
   ```
-  conda create -n harvestify python=3.6.12
-  conda activate harvestify
+  conda create -n fieldmind python=3.6.12
+  conda activate fieldmind
   pip install -r requirements.txt
   ```
 - And finally run the project with
