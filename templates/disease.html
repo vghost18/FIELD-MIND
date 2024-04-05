@@ -1,0 +1,51 @@
+{% extends 'layout.html' %} 
+{% block body %}
+
+<style>
+  html body {
+    background-image: url('https://indianseeds.in/wp-content/uploads/2021/07/common-plant-diseases-in-india-with-pictures-indian-seeds.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+  }
+</style>
+<br /><br />
+<h2 style="text-align: center; margin-top: 190px; margin-right: 0; margin-bottom: 10px; margin-left: 0; color: rgb(255, 255, 255);"><b>Find out which disease has been caught by your plant</b></h2>
+<br />
+<br>
+
+<div style="
+    width: 350px;
+    height: 50rem;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding: 10px 10px;
+    font-weight: bold;
+  ">
+
+  <form class="form-signin" method=post enctype=multipart/form-data>
+    <h2 class="h4 mb-3 font-weight-normal" style="margin-top: 0; margin-right: 0; margin-bottom: 20px; margin-left: 0; color: rgb(255, 255, 255);"><b>Please Upload The Image</b></h2>
+    <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-weight: bold; margin-bottom: 20px;">
+    <br>
+    <img id="output-image" class="rounded mx-auto d-block" />
+    <button class="btn btn-lg btn-primary btn-block" type="submit" style="font-weight: bold; margin-top: 20px;">Predict</button>
+  </form>
+</div>
+
+<script type="text/javascript">
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output-image')
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+
+</div>
+{% endblock %}
